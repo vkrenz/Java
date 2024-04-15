@@ -1,4 +1,45 @@
+import java.util.LinkedList;
 public class Main {
+
+    public static int findNode(LinkedList<String> list, String val) {
+        int index = 0;
+        for (String key : list) {
+            if (key.equals(val)) {
+                return index;
+            }
+            index++;
+        }
+        return -1;
+    }
+
+    public static void loopOverLinkedList(LinkedList<String> list) {
+        for (String key : list) {
+            System.out.println(key);
+        }
+    }
+
+    public static LinkedList<String> reverseLinkedList(LinkedList<String> list) {
+        int i = 0, j = list.size() - 1;
+        while ( i < j) {
+            // Swap the elements at indicies i and j
+            String temp = list.get(i);
+            list.set(i, list.get(j));
+            list.set(j, temp);
+
+            // Move towards the middle of the list
+            i++;
+            j--;
+        }
+
+        return list;
+    }
+
+    public static LinkedList<String> swapTwoNodes(LinkedList<String> list, int indexA, int indexB) {
+        String temp = list.get(indexA);
+        list.set(indexA, list.get(indexB));
+        list.set(indexB, temp);
+        return list;
+    }
 
     public static void main(String[] args) {
 
@@ -96,6 +137,47 @@ public class Main {
          * 2. GPS navigation.
          * 3. Music Playlist.
          */
+
+         LinkedList<String> linkedList = new LinkedList<String>();
+
+         linkedList.add("Red");
+         linkedList.add("Green");
+         linkedList.add("Blue");
+
+        // int index = linkedList.indexOf("Red");
+
+        // if (index >= 0 && index <= linkedList.size()) {
+        //     // Validate index, then update the node
+        //     linkedList.set(index, "Purple");
+        // }
+
+        // System.out.println(linkedList);
+
+        // String valToFind = "Blue";
+        // int index = 0;
+        // boolean found = false;
+
+        // for (String val :  linkedList) {
+        //     // Check if current node's value matches valToFind
+        //     if (val.equals(valToFind)) {
+        //         found = true;
+        //         break;
+        //     }
+        //     index++;
+        // }
+
+        // System.out.println(valToFind + " is located at index: " + index);
+
+        // // I also wrote a method to find the index of a node
+        // System.out.println(findNode(linkedList, "Green"));
+
+        // loopOverLinkedList(linkedList);
+
+        // LinkedList<String> reversed = reverseLinkedList(linkedList);
+        // System.out.println(reversed);
+        
+        // LinkedList<String> swapped = swapTwoNodes(linkedList, 0, 2);
+        // System.out.println(swapped);
 
     }
 
