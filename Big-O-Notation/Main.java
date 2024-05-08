@@ -31,8 +31,12 @@ public class Main {
     // }
 
     // Example of O(1) constant time
+<<<<<<< Updated upstream
     // n = 1000000
     //steps = 3
+=======
+    // n []
+>>>>>>> Stashed changes
     int addUp(int n) {
         int sum = n * (n + 1) / 2;
         return sum;
